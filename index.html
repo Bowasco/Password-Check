@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- ASSIGNMENT ONE -->
+    <h3>CHECK YOUR ELIGIBILITY</h3>
+    <input type="text" id="input1" placeholder="Age"><br><br>
+    <button onclick="but1()">Verify</button>
+
+    <!-- ASSIGNMENT TWO -->
+    <h3>PASSWORD CHECK</h3>
+    <label for="text">Password:</label>
+    <input type="password" id="input2"><br><br>
+    <label for="text">Confirm Password:</label>
+    <input type="password" id="input3"><br><br>
+
+    <button onclick="submit()">SUBMIT</button>
+
+    <script>
+
+        function but1(){
+            let input = document.getElementById("input1").value;
+            let eligible = 18
+
+            if (input >= eligible){
+                alert('You can proceed, you are eligible')
+            }else{
+                alert('You cannot proceed, you are too young')
+            }
+        }
+
+        function submit(){
+            let input2 = document.getElementById("input2").value;
+            let input3 = document.getElementById("input3").value;
+
+            if (input2 == input3){
+                alert("Password Match")
+            }else{
+                alert("Password do not match. Kindly confirm")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
